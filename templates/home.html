@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Refresh" content="**time**;url">
+    <title>Home</title>
+    <link type="text/css"  rel="stylesheet" href="static/design.css">
+<!--    <script type="text/javascript" src="static/timer.js"></script>-->
+
+</head>
+<body>
+<h1>Welcome</h1>
+{% block timers %}
+{% endblock %}
+
+<div class="links">
+<span class="home"> <a href= "{{url_for('home') }}">login </a></span>
+<span class="admin"> <a href= "{{url_for('admin') }}">admin </a></span>
+<span class="sign_up"> <a href= "{{url_for('sign_up') }}">sign_up </a></span>
+<span class="results"> <a href="{{url_for('results')}}" ><button id="results" disabled>Result </button></a></span>
+</div>
+{% block main %}
+
+{% endblock %}
+<h3 class="title1">{{title}}</h3>
+{% block result %}
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Login</title>
+      <link type="text/css"  rel="stylesheet" href="static/design.css">
+    <script type="text/javascript" src="static/timer.js"></script>
+</head>
+<body>
+{% extends 'home.html' %}
+{% block main %}
+<h3>Login Here</h3>
+<form method="post" action="/loginVerification">
+    <h4>User Id:<input type="text" name = "id"></h4>
+    <h4>Password:<input type="text" name = "password" value=""></h4>
+    <input type="submit" value="Log In" id="login" disabled>
+
+</form>
+
+{% endblock %}
+</body>
+</html>

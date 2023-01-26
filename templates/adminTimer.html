@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Timers</title>
+    <link type="text/css" rel="stylesheet" href="static/design.css">
+    <script type="text/javascript" src="static/timer.js"></script>
+</head>
+
+<body>
+
+<div>
+    {% extends 'home.html' %}
+    {% block timers %}
+    <h2 id="election-mention">Election not yet started</h2>
+    <h2 id="timer"></h2>
+    {% endblock %}
+</div>
+
+<div>
+    {% extends "adminWorks.html" %}
+{% block admin %}
+    End: <input type="datetime-local" name="eEnd" id="eEnd"> <br/>
+    <button id="timerbtn" onclick="timer()">Start Timer</button>
+    {% endblock %}
+</div>
+
+
+</body>
+
+</html>

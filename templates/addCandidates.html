@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+   <link type="text/css"  rel="stylesheet" href="static/design.css">
+</head>
+<body>
+{% extends 'adminWorks.html' %}
+{% block admin %}
+<form action="/insertCandidates" method="post">
+  <h3>Candidate Name:<input type="text" name="cname"></h3>
+  <h3>Party:<input type="text" name="party"></h3>
+  <h3>State:<input type="text" name="state"></h3>
+  <h3>Region:<input type="text" name="region"></h3>
+  <input type="submit" onclick="/addCandidates" value="add">
+</form>
+{% endblock %}
+</body>
+</html>

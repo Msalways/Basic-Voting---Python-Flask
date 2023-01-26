@@ -1,0 +1,11 @@
+create database votingsystem;
+
+use votingsystem;
+
+create table user(user_id varchar(100) primary key, name varchar(40), password varchar(80));
+
+create table admin(admin_id varchar(100) primary key, password varchar(80));
+
+create table visited(user_id varchar(100) primary key, time timestamp default CURRENT_TIMESTAMP);
+
+create table vote(candidate varchar(60), vote int);

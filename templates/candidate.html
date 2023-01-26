@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Candidates</title>
+     <link type="text/css"  rel="stylesheet" href="static/design.css">
+</head>
+<body>
+{% extends "home.html" %}
+{% block main %}
+<form method="post" action="/addVote">
+{% for name,party in candidate.items() %}
+    <ul><input type="radio" name="Candidates" id={{name}} value={{name}}>{{name}}-{{party}}</ul>
+{% endfor %}
+    <input type="submit" onclick="/" value="Vote">
+</form>
+{% endblock %}
+</body>
+</html>

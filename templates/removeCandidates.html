@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+     <link type="text/css"  rel="stylesheet" href="static/design.css">
+</head>
+<body>
+{% extends "adminWorks.html" %}
+{% block admin %}
+<h1>Delete candidates</h1>
+<form action="/DeleteCandidates" method="post">
+  Candidate name:<input type="text" name="name">
+  <input type="submit" value="Delete">
+</form>
+{% endblock %}
+</body>
+</html>

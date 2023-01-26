@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+   <link type="text/css"  rel="stylesheet" href="static/design.css">
+</head>
+<body>
+{% extends 'home.html' %})
+{% block result %}
+<table width="2" border="3" align="center" >
+  <tr>
+    <th>Candidates</th>
+    <th>Votes</th>
+  </tr>
+  {% for i,j in can%}
+  <tr>
+    <td>{{i}}</td>
+    <td>{{j}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% for name,vote in maxi %}
+<p>The winner is <b>{{name}}</b> has got <b>{{vote}}</b> <p>
+<p> To go back click on home</p>
+  {% endfor %}
+{% endblock %}
+
+</body>
+</html>
